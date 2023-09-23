@@ -18,14 +18,14 @@ class ChatsController < ApplicationController
     
         @chats = response.dig("choices", 0, "message", "content")
       end
-      
+
       private
 
       def text_params
         @query = params[:text]
       end
-    
+
  #     def set_token
  #       @api_key = Rails.application.credentials.dig(:openai, :api_key)
- #     end      
+ #     end
 end
